@@ -4,8 +4,9 @@ import { ProductService } from './product.service';
 @Controller('products')
 export class ProductController {
   constructor(private readonly service: ProductService) {}
+
   @Get()
-  all() {
+  list() {
     return this.service.list();
   }
 }
